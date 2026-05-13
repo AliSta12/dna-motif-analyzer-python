@@ -1,54 +1,69 @@
 # DNA Motif Analyzer
 
-Aplikacja w Pythonie do analizy motywów nukleotydowych w sekwencjach DNA z obsługą kodów IUPAC.
+Python-based bioinformatics application for DNA motif analysis in nucleotide sequences with IUPAC motif support, FASTA parsing, NCBI integration and data visualization.
 
 ---
 
-## Opis projektu
+## Project Overview
 
-Program umożliwia:
+DNA Motif Analyzer is a desktop bioinformatics application developed in Python for identifying and analyzing nucleotide motifs in DNA sequences.
 
-- wczytywanie sekwencji DNA w formacie FASTA  
-- wyszukiwanie motywów nukleotydowych (z obsługą IUPAC)  
-- analizę liczby wystąpień motywów  
-- wizualizację wyników (heatmapa, wykresy słupkowe)  
-- eksport wyników do plików CSV, HTML i PDF  
-- pobieranie sekwencji z bazy NCBI (na podstawie accession/UID)  
+The application enables:
 
-Aplikacja wykorzystuje podejście macierzowe do reprezentacji wyników oraz integrację z biblioteką Matplotlib do wizualizacji danych.
+- loading and validation of FASTA sequence files  
+- motif searching with full IUPAC nucleotide code support  
+- quantitative analysis of motif occurrences  
+- visualization of results using heatmaps and bar plots  
+- export of results to CSV, HTML and PDF formats  
+- retrieval of nucleotide sequences directly from the NCBI database using accession numbers or UIDs  
 
----
-
-## Funkcjonalności
-
-- obsługa kodów IUPAC (np. N, R, Y)  
-- liczenie dopasowań z nakładaniem (overlapping)  
-- normalizacja wyników (na 1000 nt)  
-- interfejs graficzny (Tkinter)  
-- eksport danych i wykresów  
+The project combines biological sequence analysis with modular software architecture and graphical data visualization.
 
 ---
 
-## Struktura projektu
+## Features
 
-- `main.py` – punkt startowy aplikacji  
-- `gui_app.py` – interfejs użytkownika (GUI)  
-- `analysis_engine.py` – logika analizy motywów  
-- `fasta_parser.py` – wczytywanie i walidacja FASTA  
-- `iupac.py` – dopasowanie motywów z użyciem kodów IUPAC  
-- `export_manager.py` – eksport wyników  
-- `export_tab.py` – GUI eksportu  
-- `ncbi_client.py` – pobieranie danych z NCBI  
+- IUPAC nucleotide code support (e.g. N, R, Y)  
+- overlapping motif matching  
+- normalized motif occurrence analysis (per 1000 nt)  
+- graphical user interface (Tkinter)  
+- export of analytical results and visualizations  
+- integration with NCBI sequence retrieval  
+- matrix-based representation of motif analysis results  
 
 ---
 
-## Wymagania
+## Technologies Used
+
+- Python 3
+- Tkinter
+- NumPy
+- Matplotlib
+- Requests
+- NCBI E-utilities API
+
+---
+
+## Project Structure
+
+- `main.py` – application entry point  
+- `gui_app.py` – graphical user interface  
+- `analysis_engine.py` – motif analysis engine  
+- `fasta_parser.py` – FASTA parsing and validation  
+- `iupac.py` – IUPAC motif matching logic  
+- `export_manager.py` – export functionality  
+- `export_tab.py` – export GUI module  
+- `ncbi_client.py` – communication with NCBI database  
+
+---
+
+## Requirements
 
 - Python 3.10+
 
-Biblioteki:
+Required libraries:
 
-```
+```text
 numpy
 matplotlib
 requests
@@ -56,7 +71,7 @@ requests
 
 ---
 
-## Instalacja
+## Installation
 
 ```bash
 pip install -r requirements.txt
@@ -64,7 +79,7 @@ pip install -r requirements.txt
 
 ---
 
-## Uruchomienie
+## Running the Application
 
 ```bash
 python main.py
@@ -72,20 +87,37 @@ python main.py
 
 ---
 
-## Przykładowe użycie
+## Example Workflow
 
-1. Wczytaj plik FASTA lub pobierz dane z NCBI  
-2. Dodaj motywy (np. ATG, TATAAA)  
-3. Uruchom analizę  
-4. Przeglądaj wyniki i wizualizacje  
-5. Eksportuj dane do pliku  
+1. Load FASTA sequences or retrieve data from NCBI  
+2. Define nucleotide motifs (e.g. ATG, TATAAA)  
+3. Run motif analysis  
+4. Review graphical and tabular results  
+5. Export results and visualizations  
 
 ---
 
-## Autor
+## Bioinformatics Scope
+
+This project demonstrates:
+
+- biological sequence analysis  
+- motif searching algorithms  
+- FASTA data processing  
+- IUPAC ambiguity handling  
+- bioinformatics software development  
+- scientific data visualization  
+- integration with biological databases  
+- modular Python application architecture  
+
+---
+
+## Application Preview
+
+![DNA Motif Analyzer](figures/app_preview.png)
+
+---
+
+## Author
 
 **Alicja Stachura-Matyjewicz**
-
-Projekt wykonany w ramach projektu semestralnego  
-na kierunku *Analityk danych biologiczno-medycznych*,  
-Uniwersytet Koźmińskiego.
